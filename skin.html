@@ -1468,7 +1468,7 @@
                 if (tgt.length == 0)
                     tgt = $(".btn_tool .layer_tool");
                 var after = $("#profile-loader");
-                if (after == null || tgt == null) return;
+                if (after == null || after.length == 0 || tgt == null) return;
                 if (tgt.html() == "") return;
                 $("#profile-loader").append(tgt.html());
                 tgt.closest(".btn_tool").remove();
