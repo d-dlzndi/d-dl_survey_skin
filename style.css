@@ -581,12 +581,16 @@ body.loaded #loading .loader {
 
 /***** 메뉴 *****/
 
-.menu-content {
+.menu-side > * {
     padding-top: 2em;
 }
 
-.menu-content:first-child {
+.menu-side > *:first-child {
     padding-top: 0;
+}
+
+.menu-side * > a:only-child > img:only-child {
+    display: block;
 }
 
 .menu-content:not(.blog-info-box) > .menu-content-header {
