@@ -1388,10 +1388,15 @@
 
                 masonryLayout();
                 $("body").removeClass("no-scroll");
+                
+                $(".lc-box .thumb > a").each(function(){
+                    const target = $(this);
+                    if (target.attr("href") != undefined) return;
+                    target.attr("href", target.closest(".lc-box").find("a.title").attr("href"));
+                });
             }); //docu end
 
-
-            window.onload = function() {
+			window.addEventListener('load', () => {
                 // side selected 설정 영역
                 var linkHref = $(location).attr('href');
                 var linkHref2 = encodeURI(linkHref);
@@ -1455,7 +1460,7 @@
                 profileLoad();
                 masonryLayout();
                 $("body").addClass("loaded");
-            }; //window end
+            }); //window end
 
             function profileLoad() {
                 var tgt = $(".btn_tool .layer_profile");
