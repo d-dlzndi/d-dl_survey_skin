@@ -1037,8 +1037,55 @@ svg.icon {
     text-decoration-color: var(--point);
 }
 
+.tt_box_namecard {
+    background: transparent;
+    border-style: solid;
+    border-width: 1px 0px;
+}
+
 .comment-main-body {
     max-height: auto;
+}
+
+.tt-box-total {
+    display: none;
+}
+
+.tt-comment-cont * {
+    border: 0;
+}
+
+.tt-comment-cont li > * {
+    padding: 0 0 0 1em;
+}
+
+.tt-item-reply .tt-list-reply-comment {
+    border-top: 0;
+}
+
+.tt-wrap-cmt .tt-box-modify {
+    right: 22px;
+}
+
+.tt-area-write {
+    padding: 0 1em 1em;
+}
+
+.tt-list-reply li {
+    border : 0;
+}
+
+.tt-list-reply > li {
+    border-bottom: 1px dashed currentColor;
+}
+
+.tt_sns_layer_wrap, .tt_sns_layer_wrap * {
+    max-width: none !important;
+}
+
+.tt-box-tooltip, .tt-show-box-tooltip,
+.tt-box-tooltip *, .tt-show-box-tooltip * {
+    max-width: none !important;
 }
 
 .comment-main-title:not(.show) ~ .comment-main-body {
@@ -1144,12 +1191,15 @@ svg.icon {
     display: flex;
 }
 
-.item-comment .img {
+.item-comment .img, 
+.tt-thumbnail 
+{
     width: 2em;
     height: 2em;
     display: block;
     border: 1px solid var(--color);
     z-index: 1;
+    border-radius: 0;
 }
 
 .comment-content {
@@ -1161,12 +1211,26 @@ svg.icon {
     line-height: 1.4;
 }
 
-.comment-content .meta p {
+.comment-content .meta p,
+.tt-box-meta {
     display: inline-block;
     border-bottom: 3px double var(--color);
     padding-top: 0.25em;
     padding-left: 0.35em;
     padding-right: .5em;
+    width: fit-content;
+}
+
+.tt-box-meta {
+    margin-left: -.3em;
+}
+
+.tt-sns-layer-wrap {
+    max-width: none !important;
+}
+
+ul.tt-list-modify, .tt-list-modify * {
+    max-width: none !important;
 }
 
 .comment-content .meta .date {
